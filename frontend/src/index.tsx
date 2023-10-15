@@ -1,10 +1,8 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
-const someText: string = "Diveev Test";
+import App from "./App";
 
-ReactDOM.render(
-    <div>
-        <h1>{someText}</h1>
-    </div>,
-    document.getElementById("root")
-);
+
+const container = document.getElementById("root")!;
+const root = createRoot(container);
+root.render(<App/>);
